@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaginaAdm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex justify-content-between align-items-center my-4">
+            <h1>Lista de Clientes</h1>
+            <div>
+                <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#gerenciarPedidosModal">
+                    <i class="bi bi-cart-check"></i> Gerenciar Pedidos
+                </button>
+                <a href="salesReport.html" class="btn btn-info me-2">Relatório de Vendas</a>
+                <button class="btn btn-primary">Atualizar Lista</button>
+            </div>
+        </header>
+
+        <a href="example.html">voltar</a>
+
+        <form id="formBusca" class="row g-3">
+            <div class="col-md-3">
+                <input type="text" class="form-control" name="nome" placeholder="Filtrar por Nome">
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Filtrar por CPF">
+            </div>
+            <div class="col-md-3">
+                <input type="email" class="form-control" name="email" placeholder="Filtrar por Email">
+            </div>
+            <div class="col-md-3">
+                <input type="tel" class="form-control" name="telefone" placeholder="Filtrar por Telefone">
+            </div>
+            <div class="col-md-3">
+                <select name="tipoTelefone" class="form-select">
+                    <option value="">Tipo Telefone</option>
+                    <option value="celular">Celular</option>
+                    <option value="fixo">Fixo</option>
+                    <option value="comercial">Comercial</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select name="status" class="form-select">
+                    <option value="">Status</option>
+                    <option value="ativo">Ativo</option>
+                    <option value="inativo">Inativo</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <button type="submit" id="filtrar" class="btn btn-primary me-2">Filtrar</button>
+                <button type="reset" class="btn btn-secondary">Limpar</button>
+            </div>
+        </form>
+
+
+        <div class="table-responsive mt-3">
+            <table class="table table-hover align-middle table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Gênero</th>
+                        <th scope="col">Dt Nasc</th>
+                        <th scope="col">DDD</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Tipo Telefone</th>
+                        <th scope="col">Endereços</th>
+                        <th scope="col">Cartões</th>
+                        <th scope="col">Transações</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="clientesTableBody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/cliente/inativar.js"></script>
+    <script src="js/cliente/editarSenha.js"></script>
+    <script src="js/cartao/addCartao.js"></script>
+    <script src="js/loadPagAdmModals.js"></script>
+    <script src="js/cliente/editarCliente.js"></script>
+    <script src="js/cartao/listarCartao.js"></script>
+    <script src="js/endereco/listarEndercos.js"></script>
+    <script src="js/cliente/listarDadosCliente.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/passwordToggle.js"></script>
+    <script src="js/gerenciarPedidos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/endereco/addEndereco.js"></script>
+</body>
+
+</html>
